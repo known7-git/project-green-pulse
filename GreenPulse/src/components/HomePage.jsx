@@ -1,37 +1,26 @@
-import '../components/css/HomePage.css';
-import vid1 from '../assets/vid1.mp4';
-import vid2 from '../assets/vid2.mp4';
-import vid3 from '../assets/vid3.mp4';
-import vid4 from '../assets/vid4.mp4';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLeaf, faGlobe, faTree } from "@fortawesome/free-solid-svg-icons";
 
 const HomePage = () => {
     return (
-        <>
-            <div className="w-[80%] h-full place-self-center gap-3 mt-16 flex-row flex scale-80">
-                <div className="video-container shadow-lg">
-                    <video src={vid1} autoPlay loop muted className='video'></video>
-                    <div className="overlay flex flex-col">
-                        <p className='text-left p-4 text-2xl motion-preset-slide-right motion-'>Total Deaths: 10,000</p>
-                        <p className='text-left p-4 text-2xl '>Total Injured: 50,000</p>
-                        <p className='text-left p-4 text-2xl '>Latest Earthquake: 2025-02-28</p>
-                        <p className='text-left p-4 text-2xl '>Next Prediction: 2025-03-15</p>
-                    </div>
-                </div>
-                <div className="video-container shadow-lg">
-                    <video src={vid2} autoPlay loop muted className='video'></video>
-                    <div className="overlay"></div>
-                </div>
-                <div className="video-container shadow-lg">
-                    <video src={vid3} autoPlay loop muted className='video'></video>
-                    <div className="overlay"></div>
-                </div>
-                <div className="video-container shadow-lg">
-                    <video src={vid4} autoPlay loop muted className='video'></video>
-                    <div className="overlay"></div>
-                </div>
-            </div>
-        </>
+        <div className="relative flex flex-col items-center justify-center h-screen  text-center p-6 overflow-hidden">
+            {/* Doodles using FontAwesome Icons */}
+            <FontAwesomeIcon icon={faLeaf} className="" />
+            <FontAwesomeIcon icon={faGlobe} className="" />
+            <FontAwesomeIcon icon={faTree} className="" />
+            
+            {/* Main Content */}
+            <h1 className="text-4xl md:text-6xl font-bold text-green-800">Green Pulse</h1>
+            <h2 className="text-xl md:text-2xl text-green-600 mt-2 italic">"Powering a Sustainable Tomorrow"</h2>
+            <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl">
+                Your One Stop Solution for Everything Related to Climate Change
+            </p>
+            <button className="mt-6 bg-green-500 px-6 py-3 text-lg text-white rounded-lg hover:bg-green-600 transition">
+                Learn More
+            </button>
+        </div>
     );
-}
+};
 
 export default HomePage;

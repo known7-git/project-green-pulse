@@ -1,7 +1,5 @@
 .video-container {
-    position: relative;
-    width: 25%;
-    height: 20%;
+    scale: 1;
 }
 
 .video {
