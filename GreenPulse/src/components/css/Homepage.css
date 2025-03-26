@@ -1,0 +1,56 @@
+/* Wobble Animation */
+@keyframes wobble {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+}
+
+.wobble {
+    animation: wobble 2s infinite ease-in-out;
+}
+
+/* Default positions for PCs */
+.fa-leaf {
+    top: 20%;
+    left: 30%;
+    font-size: 3rem;
+}
+
+.fa-globe {
+    top: 30%;
+    right: 25%;
+    font-size: 4rem;
+}
+
+.fa-tree {
+    bottom: 25%;
+    left: 40%;
+    font-size: 3.5rem;
+}
+
+/* Override positions for mobile screens */
+@media (max-width: 768px) {
+    .fa-leaf {
+        top: 15%;
+        left: 10%;
+    }
+
+    .fa-globe {
+        top: 55%;
+        right: 5%;
+    }
+
+    .fa-tree {
+        bottom: 10%;
+        left: 20%;
+    }
+}

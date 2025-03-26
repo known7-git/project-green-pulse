@@ -1,15 +1,25 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf, faGlobe, faTree } from "@fortawesome/free-solid-svg-icons";
+import "./css/HomePage.css"; // Import the CSS file for animations
 
 const HomePage = () => {
     return (
-        <div className="relative flex flex-col items-center justify-center h-screen  text-center p-6 overflow-hidden">
-            {/* Doodles using FontAwesome Icons */}
-            <FontAwesomeIcon icon={faLeaf} className="" />
-            <FontAwesomeIcon icon={faGlobe} className="" />
-            <FontAwesomeIcon icon={faTree} className="" />
-            
+        <div className="relative flex flex-col items-center justify-center h-[80vh] text-center p-6 overflow-hidden">
+            {/* Scattered Doodles using FontAwesome Icons */}
+            <FontAwesomeIcon
+                icon={faLeaf}
+                className="absolute text-green-500 wobble fa-leaf"
+            />
+            <FontAwesomeIcon
+                icon={faGlobe}
+                className="absolute text-green-500 wobble fa-globe"
+            />
+            <FontAwesomeIcon
+                icon={faTree}
+                className="absolute text-green-500 wobble fa-tree"
+            />
+
             {/* Main Content */}
             <h1 className="text-4xl md:text-6xl font-bold text-green-800">Green Pulse</h1>
             <h2 className="text-xl md:text-2xl text-green-600 mt-2 italic">"Powering a Sustainable Tomorrow"</h2>
